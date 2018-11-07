@@ -33,13 +33,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.permitAll();
 	}
 
-	@Autowired
-	public void configureGlobal (AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication()
-		.passwordEncoder(encoder())
-		.withUser("cokicoki").password(encoder().encode("enaksekali"))
-		.roles("USER");
-	}
+//	@Autowired
+//	public void configureGlobal (AuthenticationManagerBuilder auth) throws Exception {
+//		auth.inMemoryAuthentication()
+//		.passwordEncoder(encoder())
+//		.withUser("cokicoki").password(encoder().encode("enaksekali"))
+//		.roles("USER");
+//	}
 
 	@Autowired
 	private UserDetailsService userDetailsService;
